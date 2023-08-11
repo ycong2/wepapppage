@@ -31,6 +31,7 @@
          url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
     font-display: swap;
 } 
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 :root{
     --colorGreen: #cedfc3;
@@ -47,6 +48,15 @@ body{
     max-width: 1280px;
     margin: 0 auto;
 }
+
+.d-flex{display: flex !important;}
+.flex-wrap{flex-wrap:wrap !important; }
+.jcb{justify-content: space-between !important;}
+.jcc{justify-content: center !important;}
+.aic{align-items: center !important;}
+.w-100{width:100% !important}
+
+
 #mainBanner{
     background: url(../img/bg.jpg) no-repeat ;
     background-size: cover;
@@ -56,7 +66,6 @@ body{
     max-height: 475px;
     height:50%
 }
-
 #mainBanner .container{
     display: flex;
     height:100%;
@@ -76,16 +85,18 @@ body{
     display: inline-flex;
     margin-top:-5rem;
     width:100%;
+    margin-bottom: 6rem;
 }
 
 .description li{
     background-color: var(--colorGreen);
     flex-grow: 1;    /*나머지 영역만큼 맞춰줄께*/
-    margin: 0 0.5rem;
+    margin: 0 1rem;
     padding: 1rem;
     background-repeat: no-repeat;
     background-size: auto 50%;
     border: 1.5rem solid var(--colorGreen);
+    box-shadow: 8px 8px 16px rgba(0,0,0,0.4);
 }
 .description li p{
     color:var(--colorDGreen);
@@ -108,6 +119,20 @@ body{
     background-image: url(../img/box3.png);
     background-position: top right;
 }
+.description li:before{
+    background-color: #efffe4;
+    display: block;
+    width:1.5em;
+    height:1.5em;
+    border-radius: 50%;
+    letter-spacing: -0.085em;
+    text-indent: -1rem;
+    color:var(--colorDGreen);
+    font-family: 'Abril Fatface', cursive;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2.5em;
+}
 .description .face:before{
     content:"01";
 }
@@ -116,4 +141,71 @@ body{
 }
 .description .box3:before{
     content:"03";
+}
+
+#md{
+    padding-bottom: 7rem;
+}
+/* 문단태그 p,h1-h6 >>블럭태그 하위객체 안됨  >>자식태그는 인라인태그(strong, span) */
+/* 인라인태그의 특징 : 너비는 컨텐츠만큼 */
+/* position이 지정된 객체가 더 위로 간다... 비포가 먼저니까 뒤이지만 그래도 포지션이 안잡히면 앞에 있다  그러므로 포지션지정필요 */
+#md h2, 
+#thumb h2{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--colorDGreen);
+    position: relative;    
+}
+#md h2 strong,
+#thumb h2 strong {
+    position: relative;
+}
+#md h2 strong > span,
+#thumb h2 strong > span{
+    position: relative;
+}
+#md h2 strong:before,
+#thumb h2 strong:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom:0;
+    height: 40%;
+    background-color: #e9e9b4;
+}
+#md .explain li{
+    border: 1px solid var(--colorDGreen);
+    padding:0 1rem;
+    line-height: 2;
+    border-radius: 2rem;
+    margin: 0 0.5rem 0 0;
+
+}
+#md .explain p{
+  margin: 3rem 0;
+  font-size: 2em;
+
+}
+#md .explain a{
+    display: inline-block;
+    color:white;
+    background-color: var(--colorBth);
+    font-size: 1rem;
+    line-height: 2.5;
+    padding: 0 2rem;
+    border-radius: 3rem;
+    text-decoration: none;
+
+
+}
+#md .girls{
+    max-width: 512px;
+    width:40%;
+    margin: 0 5%;
+}
+#thumb{
+    background-color: var(--colorGreen);
+    padding: 5rem 0;
 }
