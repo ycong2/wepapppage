@@ -49,13 +49,19 @@ body{
     margin: 0 auto;
 }
 
-.d-flex{display: flex !important;}
-.flex-wrap{flex-wrap:wrap !important; }
-.jcb{justify-content: space-between !important;}
-.jcc{justify-content: center !important;}
-.aic{align-items: center !important;}
-.w-100{width:100% !important}
+.d-flex{ display: flex !important;}
+.flex-wrap{ flex-wrap:wrap !important; }
+.jcb{ justify-content: space-between !important;}
+.jcc{ justify-content: center !important;}
+.aic{ align-items: center !important;}
+.w-100{ width:100% !important}
+.w50{ width:50% !important}
 
+.text-right{ text-align: right !important;}
+.text-center{ text-align: center !important;}
+
+.text-white{ color:white !important}
+.bg-red{ background-color: var(--colorBth) !important;}
 
 #mainBanner{
     background: url(../img/bg.jpg) no-repeat ;
@@ -208,4 +214,90 @@ body{
 #thumb{
     background-color: var(--colorGreen);
     padding: 5rem 0;
+}
+#thumb li{
+    width:calc(50% - 1rem);
+    margin:0.5rem auto;
+    background-size: cover;
+    padding:3rem;
+    box-sizing: border-box;
+    
+}
+.thumb1{
+    background-image: url(../img/thumb1.png);
+
+}
+.thumb2{
+    background-image: url(../img/thumb2.png);
+
+
+}
+.thumb3{
+    background-image: url(../img/thumb3.png);
+
+
+}
+.thumb4{
+    background-image: url(../img/thumb4.png);
+
+
+}
+#thumb li h3{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+
+}
+#thumb li p{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+
+}
+#thumb li a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    border: 3px solid var(--colorBth);
+    line-height: 2.5;
+    padding:0 1.2rem;
+    display: inline-block;
+    color:var(--colorBth)
+}
+#sec4{
+    position: relative;
+    padding: 3rem;
+
+}
+#sec4 .container{
+    position: relative;
+    z-index: 100;
+}
+#sec4:before, #sec4:after{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top:0;
+
+}
+#sec4::before{
+    right:0;
+    background: url(../img/map.png) no-repeat right top;
+    background-size: 100%;
+
+}
+#sec4:after{
+    left:0;
+    background: url(../img/form.png) no-repeat center;
+    background-size: 100%;
+
+}
+#way dt{
+
+}
+#way dd{
+
+}
+#way dd:not(:last-child){
+
 }
