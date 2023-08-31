@@ -96,19 +96,41 @@
     <section id="sec4">
         <div class="container d-flex">
             <div id="form" class="w50">
-                <h3>무료상담신청</h3>
                 <div>
+                    <h3 class="text-green">무료상담신청</h3>
                     <form action=""></form>
+                     <ul class="formdiv">
+                            <li class="d-flex w-100 jcb">
+                                <strong class="text-white">고객명</strong>
+                                <input type="text" class="bg-white rounded border-0"></li>
+                            <li class="d-flex w-100 jcb">
+                                <strong class="text-white jcb">연락처</strong>
+                                <input type="text"class="bg-white rounded border-0"></li>
+                            <li class="d-flex w-100 jcb">
+                                <strong class="text-white">내용</strong>
+                                <textarea rows="3" class="bg-white rounded border-0"></textarea>
+                            </li>
+                        </ul>
+                        <div class="ofh">
+                        <button type="submit" class="rounded text-white bg-red border-0">온라인상담신청</button>
+                        </div>
+                        <div class="agree text-right text-white">
+                            <!-- /*아이디와 for의 이름을 똑같이 매치시켜줌*/ -->
+                            <input type="checkbox" name="" id="chk"> 
+                            <label for="chk">개인정보 제공 동의</label>
+
+                        </div>
+                    </form>
                 </div>
             
             </div>
             <div id="way" class="w50">
-                <dl>
-                    <dt>오시는길</dt>
+                <dl class="text-gray">
+                    <dt class="text-green">오시는길</dt>
                     <dd>미금역 8번출구</dd>
-                    <dt>카카오톡상담</dt>
+                    <dt class="text-green">카카오톡상담</dt>
                     <dd>통로피부과</dd>
-                    <dt>대표전화</dt>
+                    <dt class="text-green">대표전화</dt>
                     <dd>1234-5678</dd>
                 </dl>
             </div>
